@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="00: Verifying fastlane version" time="0.000429">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.000188">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="02: number_of_commits" time="0.031205">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="03: Switch to ios verify_ci lane" time="0.000204">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="04: is_ci" time="0.000383">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: create_keychain" time="0.03985">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: Switch to ios configure_dev_certificates lane" time="0.00019">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: Switch to ios configure_certificates lane" time="0.000166">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: is_ci" time="0.000195">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: match" time="1.522336">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: import_certificate" time="0.052621">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: Switch to ios build lane" time="0.000173">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="12: Switch to ios update_ios_version lane" time="0.000137">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="13: Switch to ios package_json_version lane" time="0.000179">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="14: increment_version_number" time="0.542439">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="15: number_of_commits" time="0.030108">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="16: increment_build_number" time="0.558354">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="17: gym" time="7.488162">
+        
+          <failure message="/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/actions/actions_helper.rb:67:in `execute_action'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/runner.rb:255:in `block in execute_action'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/runner.rb:229:in `chdir'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/runner.rb:229:in `execute_action'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing'&#10;src/ios/main.rb:53:in `block (2 levels) in parsing_binding'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/runner.rb:204:in `try_switch_to_lane'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/runner.rb:146:in `trigger_action_by_name'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing'&#10;src/ios/main.rb:84:in `block (2 levels) in parsing_binding'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/lane_manager.rb:47:in `cruise_lane'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/commands_generator.rb:109:in `block (2 levels) in run'&#10;/Library/Ruby/Gems/2.6.0/gems/commander-4.6.0/lib/commander/command.rb:187:in `call'&#10;/Library/Ruby/Gems/2.6.0/gems/commander-4.6.0/lib/commander/command.rb:157:in `run'&#10;/Library/Ruby/Gems/2.6.0/gems/commander-4.6.0/lib/commander/runner.rb:444:in `run_active_command'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:117:in `run!'&#10;/Library/Ruby/Gems/2.6.0/gems/commander-4.6.0/lib/commander/delegates.rb:18:in `run!'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/commands_generator.rb:353:in `run'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/commands_generator.rb:42:in `start'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/fastlane/lib/fastlane/cli_tools_distributor.rb:122:in `take_off'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.197.0/bin/fastlane:23:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:23:in `load'&#10;/usr/local/bin/fastlane:23:in `&lt;main&gt;'&#10;&#10;Error building the application - see the log above" />
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>
