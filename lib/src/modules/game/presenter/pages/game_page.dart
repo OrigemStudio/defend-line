@@ -11,10 +11,18 @@ class GamePage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: GameWidget<DefendLinesGame>(
         game: DefendLinesGame(),
+<<<<<<< Updated upstream
         //overlayBuilderMap: {
         //  "Base": (context, TicCardsBase Base) => BasePage(Base: Base),
         //  "Menu": (context, TicCardsBase Base) => MenuPage(Base: Base),
         //},
+=======
+        overlayBuilderMap: {
+          "Board": (context, DefendLinesGame game) => Board(game: game),
+          //  "Menu": (context, TicCardsBase Base) => MenuPage(Base: Base),
+        },
+        initialActiveOverlays: const ["Board"],
+>>>>>>> Stashed changes
       ),
     );
   }

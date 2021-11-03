@@ -10,4 +10,8 @@ class DefendLinesGame extends FlameGame with DoubleTapDetector, TapDetector {
     add(CampBackground(size));
     super.onLoad();
   }
+
+  void startGame() {
+    overlays.add("Board");
+  }
 }
