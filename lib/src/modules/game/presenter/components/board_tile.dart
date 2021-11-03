@@ -15,7 +15,6 @@ class BoardTile extends StatelessWidget {
     final cubit = context.read<BoardCubit>();
     return GestureDetector(
       onTap: () {
-        print(index);
         cubit.move(index);
       },
       child: Container(
