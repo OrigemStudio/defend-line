@@ -5,14 +5,13 @@ class OnMoveAction {
     final math = cubit.state as Math;
     final isFirst = math.currentPlayer == 1;
     final newPlayer = math.copyWith(currentPlayer: isFirst ? 2 : 1);
-    final newMovesPlayer1 = <int>[];
-    newMovesPlayer1.addAll(math.movesPlayer1);
-    final newMovesPlayer2 = <int>[];
-    newMovesPlayer2.addAll(math.movesPlayer2);
-    isFirst ? newMovesPlayer1.add(tile) : newMovesPlayer2.add(tile);
+    final newMovesPlayer1 =
+        isFirst ? [...math.movesPlayer1, tile] : math.movesPlayer1;
+    final newMovesPlayer2 =
+        !isFirst ? [...math.movesPlayer2, tile] : math.movesPlayer2;
+    cubit.emit(const Update());
     final isWinner =
         VerifyWinnerAction.call(isFirst ? newMovesPlayer1 : newMovesPlayer2);
-    cubit.emit(const Update());
     if (isWinner) {
       cubit.emit(Finish(FinishType.winner, player: math.currentPlayer));
     }
