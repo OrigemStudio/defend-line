@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-class BoardEntity extends Equatable {
+class TileEntity extends Equatable {
   @override
   List<Object?> get props => [];
 }

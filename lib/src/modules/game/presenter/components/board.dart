@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import '../../../../../defend_lines_exports.dart';
 
 class Board extends StatelessWidget {
@@ -9,17 +8,25 @@ class Board extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<BoardCubit, BoardState>(
+    final cubit = context.read<MathCubit>();
+    return BlocConsumer<MathCubit, MathState>(
       listener: (context, state) {
-        if (state is Errors) {
-          Fluttertoast.showToast(msg: state.error);
+        if (state is Error) {
+          ShowDialogAction.call(context, state);
+        } else if (state is Finish) {
+          ShowDialogAction.call(context, state);
         }
       },
       builder: (context, state) {
         return state.maybeMap(
-          initial: (initial) => GridBoard(game: game, board: initial.board),
-          math: (math) => GridBoard(game: game, board: math.board),
-          orElse: () => GridBoard(game: game),
+          initial: (initial) => Center(
+            child: ElevatedButton(
+              onPressed: () => cubit.onStart(),
+              child: const Text('Start'),
+            ),
+          ),
+          math: (math) => GridBoard(game: game, math: math),
+          orElse: () => Container(),
         );
       },
     );

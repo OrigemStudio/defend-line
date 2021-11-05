@@ -1,0 +1,1 @@
+enum FinishType { winner, tied }

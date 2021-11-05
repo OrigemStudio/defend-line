@@ -4,8 +4,9 @@ import '../../../../../defend_lines_exports.dart';
 
 class GridBoard extends StatelessWidget {
   final DefendLinesGame game;
-  final List<BoardTileEnum>? board;
-  const GridBoard({Key? key, required this.game, this.board}) : super(key: key);
+  final Math math;
+  const GridBoard({Key? key, required this.game, required this.math})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +18,10 @@ class GridBoard extends StatelessWidget {
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 5, childAspectRatio: 1),
             itemCount: 25,
-            itemBuilder: (_, i) => BoardTile(
-                index: i, game: game, state: board?[i] ?? BoardTileEnum.empty)),
+            itemBuilder: (_, i) {
+              final type = GetTileTypeAction.call(i, math);
+              return BoardTile(index: i, game: game, type: type);
+            }),
       ),
     );
   }

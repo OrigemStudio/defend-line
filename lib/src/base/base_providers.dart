@@ -12,7 +12,7 @@ class BaseProviders extends StatelessWidget {
         BlocProvider(create: (context) => SplashCubit(context.read())..init()),
         BlocProvider(
             create: (context) => AuthCubit(context.read(), context.read())),
-        BlocProvider(create: (context) => BoardCubit())
+        BlocProvider(create: (context) => MathCubit()),
       ],
       child: const BaseMaterial(),
     );

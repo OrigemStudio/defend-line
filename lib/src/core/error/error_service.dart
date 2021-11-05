@@ -1,9 +1,15 @@
-abstract class Failure implements Exception {}
+abstract class Failure implements Exception {
+  final String? message;
+
+  Failure({this.message});
+}
 
 class ErrorResponse extends Failure {
-  final String? error;
+  @override
+  // ignore: overridden_fields
+  final String? message;
 
-  ErrorResponse({this.error});
+  ErrorResponse({this.message});
 }
 
 class EmptyResponse extends Failure {}
